@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Github, Lock, Server } from 'lucide-react';
 
 export default function Login() {
-  const [haUrl, setHaUrl] = useState('homeassistant.local');
+  const [haUrl, setHaUrl] = useState(window.location.origin);
   const [token, setToken] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
