@@ -15,4 +15,6 @@ ingress: true
 ingress_port: 8099
 panel_icon: mdi:light-switch
 startup: application
-boot: auto 
+boot: auto
+options: {}
+schema: {} 
