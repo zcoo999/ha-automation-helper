@@ -42,7 +42,7 @@ export default function Login() {
             className="inline-flex items-center mt-2 text-sm text-gray-300 hover:text-white"
           >
             <Github className="w-4 h-4 mr-1" />
-            v1.0-beta1
+            v1.0.1
           </a>
         </div>
 
