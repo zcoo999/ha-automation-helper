@@ -11,17 +11,14 @@ RUN apk add --no-cache \
 # 设置工作目录
 WORKDIR /app
 
-# 首先只复制 package.json 和 package-lock.json（如果存在）
-COPY package*.json ./
+# 复制项目文件
+COPY ../ .
 
 # 设置 npm 配置以避免权限问题
 RUN npm config set unsafe-perm true
 
 # 安装依赖
 RUN npm install --production
-
-# 复制其余项目文件
-COPY . .
 
 # 构建项目
 RUN npm run build
@@ -33,7 +30,7 @@ RUN npm install -g serve
 EXPOSE 8099
 
 # 设置权限
-RUN chmod +x run.sh
+RUN chmod +x /app/ha_automation_helper/run.sh
 
 # 启动服务
-CMD ["./run.sh"] 
+CMD ["/app/ha_automation_helper/run.sh"] 
