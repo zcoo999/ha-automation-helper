@@ -1,20 +1,25 @@
-   name: "HA Automation Helper"
-   version: "1.0.0"
-   slug: "ha_automation_helper"
-   description: "基于HA Websocket API的场景自动化辅助工具，支持本地部署以及HAOS加载项(Addons)部署"
-   url: "https://github.com/zcoo999/ha-automation-helper"
-   arch:
-     - armhf
-     - armv7
-     - aarch64
-     - amd64
-     - i386
-   init: false
-   webui: "http://[HOST]:[PORT:8099]"
-   ingress: true
-   ingress_port: 8099
-   panel_icon: mdi:light-switch
-   startup: application
-   boot: auto
-   options: {}
-   schema: {}
+name: "HA Automation Helper"
+version: "1.0.0"
+slug: "ha_automation_helper"
+description: "基于HA Websocket API的场景自动化辅助工具，支持本地部署以及HAOS加载项(Addons)部署"
+url: "https://github.com/zcoo999/ha-automation-helper"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+ingress: true
+ingress_port: 8099
+panel_icon: mdi:light-switch
+panel_title: "HA Automation"
+panel_admin: true
+startup: application
+boot: auto
+options: {}
+schema: {}
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "Web 界面 (不需要配置 - 使用 Ingress)" 
