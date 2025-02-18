@@ -1,5 +1,5 @@
 name: "HA Automation Helper"
-version: "1.0.0"
+version: "1.0.1"
 slug: "ha_automation_helper"
 description: "基于HA Websocket API的场景自动化辅助工具，支持本地部署以及HAOS加载项(Addons)部署"
 url: "https://github.com/zcoo999/ha-automation-helper"
